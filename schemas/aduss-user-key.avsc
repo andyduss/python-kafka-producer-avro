@@ -1,0 +1,11 @@
+{
+    "type": "record",
+    "namespace": "com.andyduss.avro",
+    "name": "rcduserkey",
+    "fields": [
+        {
+            "name": "project", "type": "string"
+        }
+    ]
+}
+

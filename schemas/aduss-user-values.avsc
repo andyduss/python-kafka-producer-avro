@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "namespace": "com.andyduss.avro",
+  "name": "user",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "first_name",
+      "type": "string"
+    },
+    {
+      "name": "last_name",
+      "type": "string"
+    },
+    {
+      "name": "tzid",
+      "type": ["null", { "type": "enum", "name": "tzid", "symbols": [ "USA", "CA" ], "default": "USA" } ]
+    },
+    {
+      "name": "website_url",
+      "type": ["null", "string"],
+      "default": null
+    },
+    {
+      "name": "manager",
+      "type": ["null", {"type": "map", "values": "int"}],
+      "default": null
+    }
+  ]
+}
