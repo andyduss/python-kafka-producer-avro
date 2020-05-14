@@ -1,6 +1,20 @@
 {
   "type": "record",
   "namespace": "com.andyduss.avro",
+  "name": "event",
+  "fields": [
+    {
+      "name": "body",
+      "type": [
+        "user"
+      ]
+    }
+  ]
+},
+
+{
+  "type": "record",
+  "namespace": "com.andyduss.avro",
   "name": "user",
   "fields": [
     {
@@ -17,7 +31,14 @@
     },
     {
       "name": "tzid",
-      "type": ["null", { "type": "enum", "name": "tzid", "symbols": [ "USA", "CA" ], "default": "USA" } ]
+      "type": [
+        "null", { 
+          "type": "enum",
+          "name": "tzid",
+          "symbols": [ "USA", "CA" ],
+          "default": "USA"
+        }
+      ]
     },
     {
       "name": "website_url",
@@ -26,7 +47,10 @@
     },
     {
       "name": "manager",
-      "type": ["null", {"type": "map", "values": "int"}],
+      "type": [
+        "null",
+        {"type": "map", "values": "int"}
+      ],
       "default": null
     }
   ]
